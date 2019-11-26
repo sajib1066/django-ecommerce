@@ -1,2 +1,1 @@
-# django-ecommerce
-Django Ecommerce Projects for learning.
+# Django Ecommerce Projects for learning.
