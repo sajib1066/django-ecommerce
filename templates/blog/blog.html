@@ -1,7 +1,8 @@
 {% extends 'base/base.html' %}
+{% load static %}
 
 {% block content %}
-    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -19,7 +20,7 @@
 						<div class="row">
 							<div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+		              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_1.jpg' %});">
 		              </a>
 		              <div class="text d-block pl-md-4">
 		              	<div class="meta mb-3">
@@ -35,7 +36,7 @@
 		          </div>
 		          <div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+		              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_2.jpg' %});">
 		              </a>
 		              <div class="text d-block pl-md-4">
 		              	<div class="meta mb-3">
@@ -51,7 +52,7 @@
 		          </div>
 		          <div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+		              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_3.jpg' %});">
 		              </a>
 		              <div class="text d-block pl-md-4">
 		              	<div class="meta mb-3">
@@ -67,7 +68,7 @@
 		          </div>
 		          <div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+		              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_4.jpg' %});">
 		              </a>
 		              <div class="text d-block pl-md-4">
 		              	<div class="meta mb-3">
@@ -83,7 +84,7 @@
 		          </div>
 		          <div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
+		              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_5.jpg' %});">
 		              </a>
 		              <div class="text d-block pl-md-4">
 		              	<div class="meta mb-3">
@@ -99,7 +100,7 @@
 		          </div>
 		          <div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_6.jpg');">
+		              <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_6.jpg' %});">
 		              </a>
 		              <div class="text d-block pl-md-4">
 		              	<div class="meta mb-3">
@@ -115,7 +116,7 @@
 		          </div>
 						</div>
           </div> <!-- .col-md-8 -->
-          
+
           {% include 'blog/sidebar.html' %}
 
         </div>
