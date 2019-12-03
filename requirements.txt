@@ -1,4 +1,7 @@
 Django==2.2.7
+django-ckeditor==5.8.0
+django-js-asset==1.2.2
 Pillow==6.2.1
+psycopg2==2.8.4
 pytz==2019.3
 sqlparse==0.3.0
