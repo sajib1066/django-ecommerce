@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import AuthorProfile
 
-# Register your models here.
+class AuthorProfileAdmin(admin.ModelAdmin):
+    list_display = ['user', 'name', 'email', 'gender', 'date']
+
+admin.site.register(AuthorProfile, AuthorProfileAdmin)
