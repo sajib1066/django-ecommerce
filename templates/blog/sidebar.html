@@ -14,7 +14,7 @@
     <ul class="categories">
       {% if categories %}
         {% for category in categories %}
-        <li><a href="#">{{ category.name }}<span>(12)</span></a></li>
+        <li><a href="#">{{ category.name }}<span style="color: #000">({{ category.post_set.count }})</span></a></li>
         {% endfor %}
       {% else %}
         <li>There are no Category in the Database</li>
