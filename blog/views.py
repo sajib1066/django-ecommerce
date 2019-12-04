@@ -15,3 +15,6 @@ def blog_page(request):
         'recent_posts': recent_post
     }
     return render(request, 'blog/blog.html', context)
+
+def post_details(request, post_id):
+    return render(request, 'blog/post-details.html')
