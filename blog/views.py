@@ -17,4 +17,8 @@ def blog_page(request):
     return render(request, 'blog/blog.html', context)
 
 def post_details(request, post_id):
-    return render(request, 'blog/post-details.html')
+    post = Post.objects.get(id=post_id)
+    context = {
+        'post': post
+    }
+    return render(request, 'blog/post-details.html', context)
