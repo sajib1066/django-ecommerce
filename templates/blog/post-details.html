@@ -29,11 +29,11 @@
 
             <div class="about-author d-flex p-4 bg-light">
               <div class="bio align-self-md-center mr-4">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
+                <img src="{{ post.author.photo.url }}" alt="Image placeholder" class="img-fluid mb-4">
               </div>
               <div class="desc align-self-md-center">
-                <h3>Lance Smith</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                <h3>{{ post.author }}</h3>
+                <p>{{ post.author.about }}</p>
               </div>
             </div>
 
