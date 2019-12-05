@@ -9,6 +9,7 @@ class Product(models.Model):
     details = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     author = models.ForeignKey(AuthorProfile, on_delete=models.CASCADE)
+    is_draft = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
