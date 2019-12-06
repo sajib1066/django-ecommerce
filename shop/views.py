@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Category, Product
 
 
 def shop_page(request):
+    category = Category.objects.all()
     products = Product.objects.filter(is_draft=False)
     context = {
+        'category': category,
         'products': products
     }
     return render(request, 'shop/shop.html', context)
