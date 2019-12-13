@@ -10,3 +10,10 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Subscriber(models.Model):
+    email = models.EmailField(max_length=255, unique=True)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
