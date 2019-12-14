@@ -322,9 +322,10 @@
         <span>Get e-mail updates about our latest shops and special offers</span>
       </div>
       <div class="col-md-6 d-flex align-items-center">
-        <form action="#" class="subscribe-form">
+        <form class="subscribe-form" method=POST>
           <div class="form-group d-flex">
-            <input type="text" class="form-control" placeholder="Enter email address">
+            {% csrf_token %}
+            {{ forms.email }}
             <input type="submit" value="Subscribe" class="submit px-3">
           </div>
         </form>
