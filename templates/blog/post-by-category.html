@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Blog</span></p>
+            <h1 class="mb-0 bread">Blog</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+						<div class="row">
+              <!-- posts -->
+              {% if posts %}
+                {% for post in posts %}
+    							<div class="col-md-12 d-flex ftco-animate">
+    		            <div class="blog-entry align-self-stretch d-md-flex">
+    		              <a href="{% url 'post-details' post.id %}" class="block-20" style="background-image: url({{ post.photo.url }});">
+    		              </a>
+    		              <div class="text d-block pl-md-4">
+    		              	<div class="meta mb-3">
+    		                  <div><a href="#">{{ post.date }}</a></div>
+    		                  <div><a href="#">{{ post.author }}</a></div>
+    		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+    		                </div>
+    		                <h3 class="heading"><a href="{% url 'post-details' post.id %}">{{ post.title }}</a></h3>
+    		                <p>{{ post.content|safe|truncatewords:20 }}</p>
+    		                <p><a href="{% url 'post-details' post.id %}" class="btn btn-primary py-2 px-3">Read more</a></p>
+    		              </div>
+    		            </div>
+    		          </div>
+                {% endfor %}
+              {% else %}
+                <h2>There are no Posts in the Database</h2>
+              {% endif %}
+              <!-- /posts -->
+						</div>
+          </div> <!-- .col-md-8 -->
+
+          {% include 'blog/sidebar.html' %}
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+{% endblock %}
