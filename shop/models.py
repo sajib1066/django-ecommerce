@@ -18,6 +18,7 @@ class Product(models.Model):
     author = models.ForeignKey(AuthorProfile, on_delete=models.CASCADE)
     is_draft = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
+    inventory = models.IntegerField(default=1)
 
     def __str__(self):
         return self.name
