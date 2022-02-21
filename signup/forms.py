@@ -11,12 +11,3 @@ class UserForm(forms.ModelForm):
             'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'})
         }
 
-
-class RegistrationForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = '__all__'
-        widgets = {
-            'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
-            'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'})
-        }
