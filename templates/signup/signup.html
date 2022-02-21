@@ -1,0 +1,14 @@
+{% extends 'signup/signin.html' %}
+
+{% block user_form %}
+  <div class="form-group">
+    {{ form.username }}
+  </div>
+  <div class="form-group">
+    {{ form.password }}
+  </div>
+  <div class="form-group">
+    Already have an account? Sign in <a href="{% url 'signin' %}">here</a>.
+    <input type="submit" value="Register" class="btn btn-primary py-3 px-5">
+  </div>
+{% endblock %}
