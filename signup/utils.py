@@ -12,7 +12,6 @@ def user_exist(credential):
 
 def valid_username(credential):
     username = credential.cleaned_data.get("username")
-    print(username)
     user = User.objects.filter(username=username)
     if user:
         return False
