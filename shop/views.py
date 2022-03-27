@@ -11,6 +11,7 @@ def shop_page(request):
     }
     return render(request, 'shop/shop.html', context)
 
+
 def product_details(request, product_id):
     product_details = Product.objects.get(id=product_id)
     ctg = Category.objects.get(name=product_details.category)
@@ -20,6 +21,7 @@ def product_details(request, product_id):
         'related_products': related_products
     }
     return render(request, 'shop/product-details.html', context)
+
 
 def wishlist(request):
     return render(request, 'shop/wishlist.html')

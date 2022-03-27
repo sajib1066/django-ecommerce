@@ -97,16 +97,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
     },
 ]
 
@@ -136,7 +140,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'  # noqa
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
