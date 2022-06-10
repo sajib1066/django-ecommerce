@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'author',
     'account',
 
-    'signup'
 ]
 
 MIDDLEWARE = [
@@ -141,6 +140,13 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTH_USER_MODEL = 'account.User'
+
+AUTHENTICATION_BACKENDS = [
+    'account.auth_backend.EmailOrUsernameModelBackend'
+]
+
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'  # noqa
 
