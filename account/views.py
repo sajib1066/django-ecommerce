@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-def registration_view(request):
+def registration_view(request, *args, **kwargs):
     form = RegistrationForm()
 
     if request.method == "POST":
@@ -31,7 +31,7 @@ def login_view(request, *args, **kwargs):
         return redirect('home')
 
     form = LoginForm()
-    print(form)
+
     if request.method == "POST":
         form = LoginForm(request.POST)
         if form.is_valid():
