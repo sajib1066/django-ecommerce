@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form class="bg-white p-5 contact-form" method="post">
+            <form class="bg-white p-5 contact-form" action="{% url 'signin' %}" method="post">
               {% csrf_token %}
               {% block user_form %}
               
