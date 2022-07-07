@@ -47,9 +47,10 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'author',
+
     'account',
 
-    'signup'
+    # 'signup'
 ]
 
 MIDDLEWARE = [
@@ -141,6 +142,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'  # noqa
 

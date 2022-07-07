@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% include 'base/header.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section class="ftco-section contact-section bg-light">
+      <div class="container">
+        <div class="row block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form class="bg-white p-5 contact-form" action="{% url 'signup' %}" method="post">
+              {% csrf_token %} {% for field in form %}
+              <div class="form-group">
+                {{field}}
+              </div>
+              {% endfor %}
+              <!-- <div class="form-group">
+                {{ form.password }}
+              </div> -->
+              <div class="form-group">
+                Already have an account? Sign in <a href="{% url 'signin' %}">here</a>.
+                <input type="submit" value="Register" class="btn btn-primary py-3 px-5">
+              </div> 
+              
+            </form>
+          </div>
+          <div class="col-md-6 d-flex">
+          	<div id="map" class="bg-white"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %} 
