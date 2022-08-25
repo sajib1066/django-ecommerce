@@ -1,22 +1,92 @@
 # Django E-commerce Website.
 
-## How To Setup On Linux
-1. Clone This Project `git clone https://github.com/sajib1066/django-ecommerce.git`
-2. Go to Project Directory `cd django-ecommerce`
-3. Create a Virtual Environment `python -m venv venv`
-4. Activate Virtual Environment `source venv/bin/activate`
-5. Install Requirements Package `pip install -r requirements.txt`
-6. Migrate Database `python manage.py migrate`
-7. Create Super User `python manage.py createsuperuser`
-8. Finally Run The Project `python manage.py runserver`
+### Cloning the repository
 
-## How To Setup on Windows
+--> Clone the repository using the command below :
+```bash
+git clone https://github.com/sajib1066/django-ecommerce.git
 
-1. Clone This Project `git clone https://github.com/sajib1066/django-ecommerce.git`
-2. Go to Project Directory `cd django-ecommerce`
-3. Create a Virtual Environment `python -m venv venv`
-4. Activate Virtual Enviromment ` venv\Scripts\activate`
-5. Install Requirements Package `pip install -r requirements.txt`
-6. Migrate Database `python manage.py migrate`
-7. Create Super User `python manage.py createsuperuser`
-8. Finally Run The Project `python manage.py runserver`
+```
+
+--> Move into the directory where we have the project files : 
+```bash
+cd django-ecommerce
+
+```
+
+--> Create a virtual environment :
+```bash
+# Create our virtual environment
+python -m venv venv
+
+```
+
+--> Activate the virtual environment : <br><br>
+windows
+```bash
+venv\scripts\activate
+
+```
+linux
+```bash
+source venv/bin/activate
+
+```
+
+--> Install the requirements :
+```bash
+pip install -r requirements.txt
+
+```
+
+--> Migrate Database
+```bash
+python manage.py migrate
+
+```
+
+--> Create Super User
+```bash
+python manage.py createsuperuser
+
+```
+
+#
+
+### Running the App
+
+--> To run the App, we use :
+```bash
+python manage.py runserver
+
+```
+
+> ⚠ Then, the development server will be started at http://127.0.0.1:8000/
+
+#
+
+### App Preview :
+
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Landing page
+</p>
+<img src="https://user-images.githubusercontent.com/47305153/186664016-c0aece16-cfe3-475f-8ca6-c5cac62c9f88.PNG">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  More view on landing page
+</p>
+<img src="https://user-images.githubusercontent.com/47305153/186664028-a661886b-88b5-474d-bcd8-1162258ab6d1.PNG">  
+</td>
+</table>
+
+
+## Documentation
+You can check up django documentation page for any further information.
+[Django Docs](https://docs.djangoproject.com/en/4.0/)
