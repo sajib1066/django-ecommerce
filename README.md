@@ -42,8 +42,14 @@ pip install -r requirements.txt
 --> Migrate Database
 ```bash
 python manage.py migrate
+## above migrations is not working we have to follow below commands
+python.exe -m pip install --upgrade pip
 
-```
+pip install --upgrade setuptools
+python -c "from distutils.version import LooseVersion; print('distutils is available')"
+
+
+
 
 --> Create Super User
 ```bash
